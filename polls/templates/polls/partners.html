@@ -1,0 +1,37 @@
+{% include 'polls/header1.html' %}
+
+{% load static %}
+<div class="container partners_cont">
+   <h1>TƏRƏFDAŞLARIMIZ</h1>
+   <hr>
+   <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+         <div class="tile">
+            <div class="wrapper">
+               <div class="banner-img text-center">
+                  <img src="{% static 'img/headstart.jpg' %}">
+               </div>
+               <div class="dates">
+                  <a href="http://headstart-international.com/" target="_blank">Headstart International</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+         <div class="tile">
+            <div class="wrapper">
+               <div class="banner-img text-center">
+                  <img src="{% static 'img/tuv.jpg' %}">
+               </div>
+               <div class="dates">
+                  <a href="https://www.facebook.com/tuvazerbaycan/" target="_blank">TÜV Austria Azərbaycan</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+{% include 'polls/footer.html' %}

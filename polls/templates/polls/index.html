@@ -1,0 +1,108 @@
+{% include 'polls/header.html' %}
+{% load static %}
+
+<a href="#" id="c-go-top" class="c-go-top"><i class="fa fa-chevron-up fa-fw"></i></a>
+<div class="container">
+   <div class="index_aboutus">
+      <h1>Haqqımızda</h1>
+      <p>2018-ci ildə fəaliyyətə başlamış "Baku Management Consulting and Services" MMC idarəetmə sistemləri üzrə məsləhət, təlimlər, auditlər, monitorinq və biznes proseslərin hazırlanması sahəsində öz müştərilərinə xidmət göstərməkdədir. Şirkətin yaradılmasında əsas məqsəd fərdi şəkildə xidmət göstərən ixtisaslı mütəxəssisləri bir araya gətirərək müştəri firmalara effektiv və professional şəkildə xidmət göstərməkdir. <a href="{% url 'polls:about' %}">Daha ətraflı <i class="fas fa-long-arrow-alt-right"></i></a></p>
+   </div>
+</div>
+<div class="container-fluid full_index_services">
+   <div class="container ">
+      <div class="index_services">
+         <h1>Xidmətlər</h1>
+         <div class="row">
+
+            <div class="col-md-4">
+               <div class="index_services_short">
+                  <div class="icon"><img src="{% static 'img/001.png' %}" alt="" width="83" ></div>
+                  {% for tit in services_list %}
+                  <h3 class="title">{{tit.title_s}}</h3>
+                  <p class="description">{{tit.content_s|safe }}</p>
+                  {% endfor %}
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="index_services_short">
+                  <div class="icon"><img src="{% static 'img/002.png' %}" alt="" width="73" ></div>
+                  <h3 class="title">Auditlər</h3>
+                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="index_services_short">
+                  <div class="icon"><img src="{% static 'img/003.png' %}" alt="" width="73" ></div>
+                  <h3 class="title">Təlimlər</h3>
+                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="index_services_short">
+                  <div class="icon"><img src="{% static 'img/004.png' %}" alt="" width="73" ></div>
+                  <h3 class="title">Biznes Proseslərin hazırlanması</h3>
+                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="index_services_short">
+                  <div class="icon"><img src="{% static 'img/005.png' %}" alt="" width="73" ></div>
+                  <h3 class="title">Monitorinq</h3>
+                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+               </div>
+            </div>
+
+            <div class="col-md-4">
+               <div class="index_services_short">
+                  <div class="icon"><img src="{% static 'img/006.png' %}" alt="" width="83" ></div>
+                  <h3 class="title">Sənədlərin hazırlanması</h3>
+                  <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+               </div>
+            </div>
+
+         </div>
+      </div>
+      <div class="container ">
+         <div class="row justify-content-end">
+            <div class="col-md-12 ">
+               <div class="more_services ">
+                  <a href="{% url 'polls:services' %}">Xidmətlər barədə daha ətraflı <i class="fas fa-long-arrow-alt-right"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!-- End of row -->
+
+<script>
+   $(document).ready(function(){
+     $('.customer-logos').slick({
+         slidesToShow: 6,
+         slidesToScroll: 1,
+         autoplay: true,
+         autoplaySpeed: 1500,
+         arrows: false,
+         dots: false,
+         pauseOnHover: false,
+         responsive: [{
+             breakpoint: 768,
+             settings: {
+                 slidesToShow: 4
+             }
+         }, {
+             breakpoint: 520,
+             settings: {
+                 slidesToShow: 3
+             }
+         }]
+     });
+   });
+</script>
+
+
+{% include 'polls/footer.html' %}

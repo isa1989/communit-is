@@ -1,0 +1,18 @@
+{% include 'polls/header1.html' %}
+
+{% load static %}
+<div class="container">
+   <div class="aboutus">
+      {% for about in about_list %}
+        <h2>{{about.title_a}}</h2><hr>
+      <div class="container-fluid about-img"></div>
+
+       <p>{{about.content_a|safe}}</p>
+       {% endfor %}
+   </div>
+   </div>
+
+
+{% include 'polls/footer.html' %}
+
+
